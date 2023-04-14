@@ -31,7 +31,7 @@ body {
 
 .background {
     background-image: url(/assets/Capture.PNG);
-    background-size: 600px;
+    background-size: 400px;
     /* position: fixed;
     left: 0;
     top: 0; */
@@ -60,13 +60,15 @@ body {
 }
 
 .year {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: 900;
     line-height: 1.5;
+    color: cadetblue;
 }
 
 .timer {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -79,7 +81,7 @@ body {
     background-color: var(--timer-box-bg);
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-
+    
 }
 @media (max-width: 768px) {
   .timer-box{
@@ -88,11 +90,13 @@ body {
   }
   }
 .timer-box__count {
-    --size: 10rem;
+    --size: 8rem;
     width: var(--size);
     height: var(--size);
     display: grid;
     place-items: center;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+
 }
 
 .timer-box__count>span {
