@@ -95,8 +95,6 @@ body {
     height: var(--size);
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
-
 }
 
 .timer-box__count>span {
