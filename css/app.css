@@ -1,0 +1,130 @@
+:root {
+    --txt-color: #fff;
+    --timer-box-bg: #1c2451;
+    --timer-box-txt-bg: #085391;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    color: var(--txt-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.fireworks-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-position: bottom left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://img.freepik.com/free-photo/textured-mulberry-paper_53876-92967.jpg?w=826&t=st=1677300905~exp=1677301505~hmac=d9c315d401209a560a57f4d5fca5c9c754dd0e8db2216091d19d6e09ca3cbe18);
+    background-size: cover;
+}
+
+.background {
+    background-image: url(/assets/Capture.PNG);
+    background-size: 600px;
+    /* position: fixed;
+    left: 0;
+    top: 0; */
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content-wrapper {
+    z-index: 99;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.year {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1.5;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer>*~* {
+    margin-left: 1.5rem;
+}
+
+.timer-box {
+    background-color: var(--timer-box-bg);
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+
+}
+@media (max-width: 768px) {
+  .timer-box{
+    grid-template-columns: repeat(auto-fill,minmax(50px,1fr));
+
+  }
+  }
+.timer-box__count {
+    --size: 10rem;
+    width: var(--size);
+    height: var(--size);
+    display: grid;
+    place-items: center;
+}
+
+.timer-box__count>span {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.timer-box__text {
+    display: grid;
+    place-items: center;
+    background-color: var(--timer-box-txt-bg);
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.error {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+@media only screen and (max-width: 1200px) {
+    html {
+        font-size: 60%;
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    html {
+        font-size: 40%;
+    }
+}
